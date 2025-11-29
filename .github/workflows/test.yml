@@ -29,6 +29,7 @@ jobs:
 
     - name: Install dependencies
       run: |
+        composer remove phpunit/phpunit --dev --no-interaction --no-update
         composer require "orchestra/testbench:${{ matrix.testbench }}" --dev --no-interaction --no-update
         composer update --prefer-stable --prefer-dist --no-interaction
 
